@@ -32,8 +32,6 @@ public class ParallaxController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-
-
 		// for each background
 		for (int i = 0; i < backgrounds.Length; i++) {
 			// The parallax is the opposite movement of the camera 
@@ -49,9 +47,7 @@ public class ParallaxController : MonoBehaviour {
 
 			//Now lerp between current background position and target position
 			backgrounds[i].position = Vector3.Lerp(backgrounds[i].position, target, smoothing * Time.deltaTime);
-
 		}
-
 		previous_Cam_Pos = cam.position;
 	}
 }

@@ -17,9 +17,10 @@ public class CameraController : MonoBehaviour {
 	void Start () {
 		followAhead = 3f;
 		smoothing = 2f;
-		target = GameObject.Find ("Player");
 		followTarget = true;
-
+		target = transform.root.gameObject;
+		transform.gameObject.name = target.name + " " + transform.gameObject.name;
+		gameObject.transform.parent = null;
 	}
 
 	// Update is called once per frame
